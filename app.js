@@ -443,7 +443,8 @@ app.get('/checkout', async (req, res) => {
 		//return sessionToken;
 	} catch (error) {
 		console.error(error);
-		res.render("checkout", { token: "FAILED" });
+		//res.render("checkout", { token: "FAILED" });
+		res.send(error); 
 	}
 });
 
